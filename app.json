@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/pro-list/pro_list",
+    "pages/home/home",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/home/home",
-    "pages/pro-list/pro_list",
     "pages/pro-detail/pro_detail",
     "pages/shoppingcar/shop_car",
     "pages/user/user",
@@ -11,8 +11,34 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#AB956D",
+    "navigationBarTitleText": "零食商城",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/home/home",
+      "text": "主页",
+      "iconPath": "image/12.png",
+      "selectedIconPath": "image/11.png"
+    },
+    {
+      "pagePath": "pages/pro-list/pro_list",
+      "text": "分类",
+      "iconPath": "image/22.png",
+      "selectedIconPath": "image/21.png"
+    },
+    {
+      "pagePath": "pages/shoppingcar/shop_car",
+      "text": "购物车",
+      "iconPath": "image/32.png",
+      "selectedIconPath": "image/31.png"
+    },
+    {
+      "pagePath": "pages/user/user",
+      "text": "我的",
+      "iconPath": "image/42.png",
+      "selectedIconPath": "image/41.png"
+    }]
   }
 }
