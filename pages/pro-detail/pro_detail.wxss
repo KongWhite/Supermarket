@@ -1,1 +1,214 @@
 /* pages/pro-detail/pro_detail.wxss */
+/* pages/pro-list/pro_list.wxss */
+.detalis{
+  margin-top: 15rpx;
+  display: flex;
+}
+.detalis text{
+  margin-left: 15rpx;
+  font-size: 13px;
+  color: #81D740;
+}
+
+.detalis_img{
+  display: flex;
+  position: absolute;
+  right: 25rpx;
+}
+.detalis_img navigator:nth-child(1){
+  margin-right: 50rpx;
+}
+.detalis_img image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.cart2{
+  display: flex;
+  flex-direction: column;
+}
+.cart2>text{
+  display: block;
+}
+.cart2_img text{
+  display: block;
+  width: 50rpx;
+  height: 50rpx;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 100%;
+  background: #AB956C;
+  position: relative;
+  right: -490rpx;
+  top: 60rpx;
+  z-index: 10;
+}
+.cart2_img image{
+  width: 120rpx;
+  height: 120rpx;
+  position: relative;
+  right: -450rpx;
+}
+.cart2_img image:last-child{
+  margin-left: 50rpx;
+
+}
+.goods1{
+  text-align: center;
+}
+.goods1 image{
+  width: 350rpx;
+  height: 350rpx;
+}
+.cart_list{
+  width: 90%;
+  height: 100rpx;
+  background: #AB956C;
+  margin-top: 50rpx;
+  margin-left: 40rpx;
+  border-radius:60rpx;
+}
+.cart_list view{
+  display: flex;
+  justify-content: space-around;
+}
+.cart_list navigator{
+  margin-top: 25rpx;
+}
+.cart_list navigator text{
+  font-size: 13px;
+  font-weight: bold;
+  color:#fff;
+}
+.cart_list navigator image{
+  width: 75rpx;
+  height: 75rpx;
+  margin-top: -15rpx;
+}
+.text_list{
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+.text_list text{
+  font-size: 14px;
+  margin: 15rpx;
+  font-weight: bold;
+  color: #767676;
+}
+.monery{
+  display: flex;
+  width: 70%;
+  height: 55rpx;
+  margin-top:20rpx;
+  padding: 10rpx;
+  border-top-right-radius: 40rpx;
+  border-bottom-right-radius: 40rpx;
+  background: rgb(0, 0, 0);
+}
+.monery text{
+  font-size: 11px;
+  color: #fff;
+}
+.monery>text{
+  margin-top: 10rpx;
+}
+.monery navigator{
+  margin-left: 35rpx;
+  margin-top: -5rpx;
+}
+.monery navigator text{
+  display: block;
+  width: 120rpx;
+  margin-top: 20rpx;
+  background: #34EA0A;
+  border-radius: 10rpx;
+}
+.monery image{
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  right: 190rpx;
+  top: 75rpx;
+}
+.monery_list{
+  display: block;
+  position: relative;
+  left: 550rpx;
+  top: -70rpx;
+}
+.monery_list text{
+  font-size: 12px;
+  padding: 5rpx 10rpx;
+  border: 1px solid #767676;
+}
+.explain{
+  display: flex;
+  justify-content: space-around;
+  margin: 15rpx;
+}
+.explain text{
+  font-size: 13px;
+}
+.explain>text{
+  margin-top: 10rpx;
+}
+.check{
+  margin: 30rpx 40rpx 30rpx 40rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.check text{
+  font-size: 13px;
+}
+.review{
+  display: flex;
+  justify-content: space-around;
+  margin: 23rpx;
+}
+.review_1 view image{
+  display: block;
+  border: 1px solid #ccc;
+  padding:5rpx;
+  margin: 10rpx 20rpx 10rpx 0;
+  width: 25rpx;
+  height: 25rpx;
+  box-shadow: 1rpx 1rpx 1rpx #ccc;
+}
+.review_1 text{
+  font-size: 12px;
+  color: #767676;
+}
+.review>text{
+  font-size: 12px;
+  color: #767676;
+  margin-top: 10rpx;
+}
+.review_1 text{
+  font-size: 14px;
+  margin-left: 30rpx;
+}
+.review_1 view{
+  display: flex;
+  margin-left: 40rpx;
+  margin-top: 35rpx;
+}
+.review_1 view image{
+  width: 150rpx;
+  height: 150rpx;
+}
+.image-list image:nth-child(1){
+  height: 40px;
+}
+.image-list image{
+  width: 100%;
+  margin: 0;
+}
+.image-text{
+  text-align: center;
+  margin: 25rpx;
+  font-weight: bold;
+}
