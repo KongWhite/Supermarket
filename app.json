@@ -1,12 +1,12 @@
 {
   "pages": [
+    "pages/users/users",
     "pages/pro-list/pro_list",
     "pages/home/home",
     "pages/index/index",
     "pages/logs/logs",
     "pages/pro-detail/pro_detail",
     "pages/shoppingcar/shop_car",
-    "pages/user/user",
     "pages/pro/pro"
   ],
   "window": {
@@ -35,7 +35,7 @@
       "selectedIconPath": "image/31.png"
     },
     {
-      "pagePath": "pages/user/user",
+      "pagePath": "pages/users/users",
       "text": "我的",
       "iconPath": "image/42.png",
       "selectedIconPath": "image/41.png"
