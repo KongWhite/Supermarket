@@ -1,0 +1,4 @@
+<!--pages/quan/quan.wxml-->
+<view>
+<text>您当前暂无可用购物券</text>
+</view>

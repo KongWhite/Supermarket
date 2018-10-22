@@ -1,2 +1,38 @@
 <!--pages/pro-list/pro_list.wxml-->
-<text>pages/pro-list/pro_list.wxml</text>
+<view class="pro_list">
+  <!--商品列表左侧-->
+  <view class="pro_left">
+    <view class="pro_item active">果味</view>
+    <view class="pro_item">蔬菜</view>
+    <view class="pro_item">炒货</view>
+    <view class="pro_item">点心</view>
+    <view class="pro_item">粗茶</view>
+    <view class="pro_item">淡饭</view>
+  </view>
+  <!--商品列表右侧-->
+  <view class="pro_right">
+    <!--banner图-->
+    <view class="list_banner"><image src="/image/list1.png" mode='aspectFill'></image></view>
+    <!--类型-->
+    <view class="pro_type">果味</view>
+    <!--商品展示-->
+    <view class="pro_lists">
+      <navigator class="pro_list" url="/pages/pro-detail/pro_detail">
+        <image src="/image/c2.png" mode="aspectFill"></image>
+        <text>梨花带雨3个</text>
+      </navigator>
+      <navigator class="pro_list" url="/pages/pro-detail/pro_detail">
+        <image src="/image/c3.png" mode="aspectFill"></image>
+        <text>红枣500g</text>
+      </navigator>
+      <navigator class="pro_list" url="/pages/pro-detail/pro_detail">
+        <image src="/image/c4.png" mode="aspectFill"></image>
+        <text>奇异果2个</text>
+      </navigator>
+      <navigator class="pro_list" url="/pages/pro-detail/pro_detail">
+        <image src="/image/c4.png" mode="aspectFill"></image>
+        <text>奇异果2个</text>
+      </navigator>
+    </view>
+  </view>
+</view>
