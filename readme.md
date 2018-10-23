@@ -1,4 +1,5 @@
 ﻿1. 微信小程序项目 -- 零食商城
+ ----------------------------
    1. 包含组件:
       1. 首页               -- home.wxml
       2. 商品列表页         -- pro-list.wxml
@@ -17,7 +18,7 @@
       6. 许金山: 数据库
       
    3. 数据库
-      
+      <pre>
       1. swiper: id, sid, img, title, href, backup
 
       2. banner(主题海报/二级菜单入口): id, bid, img, href, title, type(包含哪类产品), backup
@@ -37,8 +38,10 @@
 
       8. pro_class(新增,产品分类): id, cid, name, type(对应商品类型), backup
 	       type: fruit(果味): 1001, veg(蔬菜): 1002, dry(炒货): 1003, dessert(点心): 1004, tea(粗茶): 1005, cereal(淡饭): 1006, backup
-
+   </pre>
+   
    4. 后台请求接口:
+  <pre>
       1. 服务器地址及端口: http://176.137.16.31:3000
 	
       2. /index/swiper 
@@ -94,8 +97,8 @@
 		   ,user_id    用户id
 		   ,status     订单状态
 		   ,count_num  购买产品个数	 
-
-      10. 
+      
+      </pre>
 
 
 
