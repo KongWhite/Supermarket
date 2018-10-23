@@ -1,1 +1,73 @@
 /* pages/shoppingcar/shop_car.wxss */
+/**/
+/*商品项目*/
+.shop{
+  display: flex;
+  border-bottom: 1rpx solid #ddd;
+  padding:20rpx;
+  font-size:31rpx;
+}
+ .shop-check view{
+  width:40rpx;
+  height:40rpx;
+  border:2px solid #ddd;
+  border-radius: 50%; 
+ 
+}
+.shop .shop-check view{
+ margin: 50rpx 20rpx 0 0;
+}
+.shop-info{
+  display: flex;
+  flex-direction: column;
+}
+.shop-img{
+  width:150rpx;
+  height:150rpx;
+  margin-right: 25rpx;
+  border-radius: 50%;
+}
+.shop-button{
+  margin-top:60rpx;
+}
+.shop-sign{
+  margin-right: 75rpx;
+}
+.shop-add{
+  margin-left: 75rpx;
+}
+/*商品价格*/
+.shop-price{
+  display: flex;
+  flex-direction: column;
+  margin-left: 170rpx;
+}
+.shop-price .delete{
+  display: block;
+  margin: 60rpx 0 0 30rpx;
+}
+/*总选*/
+.total{
+  width:100%;
+  height: 80rpx;
+  font-size: 32rpx;
+  color:white;
+  display:flex;
+  position: absolute;
+  left:0;
+  top:1030rpx;
+  background: #AB956D;
+}
+.total .shop-check view{
+   margin: 12rpx 20rpx 0 20rpx;
+}
+.total .checkall{
+  margin-top: 15rpx;
+}
+.total .total-price{
+  margin: 15rpx 38rpx 0 380rpx;
+}
+.total .arrow{
+  font-size: 42rpx;
+  margin-top:6rpx;
+}

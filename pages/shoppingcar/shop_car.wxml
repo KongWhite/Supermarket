@@ -1,2 +1,47 @@
 <!--pages/shoppingcar/shop_car.wxml-->
-<text>pages/shoppingcar/shop_car.wxml</text>
+<view class="shop">
+ <view class="shop-check">
+    <view class="chexkbox"></view>
+ </view>
+ <image class="shop-img" src="/image/s5.png" mode="aspectFill" lazy-load></image>
+ <view class="shop-info">
+   <text>新鲜芹菜 半斤</text>
+   <view class="shop-button">
+     <text class="shop-sign">-</text>
+     <text>4</text>
+     <text class="shop-add">+</text>
+   </view>
+ </view>
+ <view class="shop-price">
+   <text>￥0.01</text>
+   <text class="delete">X</text>
+ </view>
+</view>
+<view class="shop">
+ <view class="shop-check">
+    <view class="chexkbox"></view>
+ </view>
+ <image class="shop-img" src="/image/s6.png" mode="aspectFill" lazy-load></image>
+ <view class="shop-info">
+   <text>素米 500g</text>
+   <view class="shop-button">
+     <text class="shop-sign">-</text>
+     <text>1</text>
+     <text class="shop-add">+</text>
+   </view>
+ </view>
+ <view class="shop-price">
+   <text>￥0.03</text>
+   <text class="delete">X</text>
+ </view>
+</view>
+
+
+<view class="total">
+  <view class="shop-check">
+   <view class="chexkbox"></view>
+  </view>
+  <text class="checkall">全选</text>
+  <text class="total-price">￥0.00</text>
+  <text class="arrow">➔</text>
+</view>
