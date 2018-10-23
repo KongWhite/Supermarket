@@ -45,7 +45,7 @@
 .pro_lists{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content:left;
 }
 .pro_lists .pro_list{
   width:32%;
