@@ -49,6 +49,7 @@
 	 
       3. /index/banner 
 	 return -> img-url  banner 图片地址
+	           top_img  二级列表最上面图片地址
 		   type     对应二级列表的产品类型编号	
 
       4. /index/new-pro
@@ -61,7 +62,8 @@
       5. /products/list-name
          return -> cid     商品分类名id
 		   ,name   商品分类名
-		   ,type   商品分类名对应的商品分类类型      
+		   ,type   商品分类名对应的商品分类类型
+		   ,img    商品列表最上层图片地址
 
       6. /products/list?type=type
          get 方式获取类型为 type 的所有商品
