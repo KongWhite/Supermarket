@@ -1,18 +1,23 @@
-// pages/home/home.js
+// miniprogram/pages/home/home.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    imgs:[]
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    /*获取服务器的轮播图片*/
+    wx.request({
+      url:"http://127.0.0.1:3000/imagelist",
+      method:"GET",
+      success:(res)=>{
+        console.log(res);
+        this.setData({
+          imgs:res.data.msg
+        })
+      }
+    })
   },
 
   /**
