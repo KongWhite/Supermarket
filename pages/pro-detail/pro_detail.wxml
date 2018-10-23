@@ -1,2 +1,114 @@
-<!--pages/pro-detail/pro_detail.wxml-->
-<text>pages/pro-detail/pro_detail.wxml</text>
+<!--pages/pro-list/pro_list.wxml-->
+<!--推荐-查找-消息-->
+<view class='detalis'>
+  <navigator>
+     <text>推荐</text>
+  </navigator>
+  <view class='detalis_img'>
+  <navigator>
+     <image src='/image/file.png' mode='aspectFill' lazy-load></image> 
+  </navigator>
+  <navigator>
+     <image src='/image/news.png' mode='aspectFill' lazy-load></image>
+  </navigator>     
+  </view>
+</view>
+<!--红包-->
+<view class='monery'>
+  <text>首次绑定即可获得59-30元红包</text>
+  <navigator>
+      <text>去绑定</text>
+  </navigator>
+  <image src='/image/hong.png' mode='aspectFill' lazy-load></image>
+</view>
+<!--详情主体-->
+<view class='cart2'>
+<!--购物车-收藏夹-->
+  <view class='cart2_img'>
+    <text>1</text>
+    <image src='/image/cart2.png' mode='aspectFill' lazy-load></image> 
+   <!-- <image src='/image/sc.png' mode='aspectFill' lazy-load></image>-->
+  </view>
+</view>
+<!--商品图片-->
+<view class='goods1'>
+   <image src='/image/goods1.png' mode='aspectFill' lazy-load></image>
+</view>
+<view class='cart_list'>
+<!--购物车栏-->
+  <view>
+     <navigator>
+        <text>数量 1</text>
+     </navigator>
+     <navigator>
+         <text>+</text>
+     </navigator>
+     <navigator>
+         <text>加入购物车</text>
+     </navigator>  
+     <navigator>
+         <image src='/image/cart1.png' mode='aspectFill' lazy-load></image>
+     </navigator>
+  </view>
+  <!--商品名称-价格-->
+</view>
+<view class='text_list'>
+   <text>有货</text>
+   <text>新鲜梨花带雨</text>
+   <text>￥0.01</text>
+</view>
+<navigator class='monery_list'>
+   <text>降价通知</text>
+</navigator>
+<view class='any'></view>
+<!--说明-->
+<view class='explain arrow'>
+   <text>说明</text>
+   <navigator>
+      <text>·  运费说明</text>
+   </navigator>
+   <navigator>
+      <text>·  售后说明</text>
+   </navigator>
+   <navigator>
+      <text>·  品质保障</text>
+   </navigator>
+</view>
+<view class='any1'></view>
+<!--评论-->
+<view class='check'>
+   <text>看大家怎么说    (1360)</text>
+   <navigator class='arrow'>
+       <text>查看全部</text>
+   </navigator>
+</view>
+<view class='any'></view>
+<view class='review'>
+   <view>
+      <text>Tedu</text>
+   </view>
+   <view class='shop-start'>
+      <view class='star-after'>★★★★★</view>
+      <view class='star-before'>★★★★★</view>
+    </view>
+   <text>03月18日17:59:46</text>
+</view>
+<view class='review_1'>
+    <text>酸酸甜甜很好吃，新鲜，个头大</text>
+    <view>
+       <image src='/image/31.jpg' mode='aspectFill' lazy-load></image>
+       <image src='/image/33.jpg' mode='aspectFill' lazy-load></image>
+    </view>
+</view>
+<view class='any1'></view>
+<!--详情图片-->
+<view class='image-list'>
+     <image mode='aspectFill' lazy-load src='/image/9.jpg'></image>
+     <view class='image-text'><text>产品信息</text></view>
+     <image mode='aspectFill' lazy-load src='/image/10.jpg'></image>
+     <image mode='aspectFill' lazy-load src='/image/11.jpg'></image>
+     <image mode='aspectFill' lazy-load src='/image/12.jpg'></image>
+     <image mode='aspectFill' lazy-load src='/image/13.jpg'></image>
+     <view class='image-text'><text>售后服务</text></view>
+     <image mode='aspectFill' lazy-load src='/image/14.jpg'></image>
+</view>
