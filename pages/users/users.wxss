@@ -1,0 +1,102 @@
+/* pages/users/users.js.wxss */
+/* .container{text-align:center;} */
+/*调整用户中心图像大小*/
+page{
+  background:#F7F7F7;
+}
+.container .user{
+  width:200rpx;
+  height:180rpx;
+  margin-top:-120rpx;
+  background:#ccc;
+  border-radius:50%;
+  display:block;
+}
+.uname{
+  display: block;
+  margin-top:10px;
+  color: #1a1a1a;
+}
+/*积分和券宽度各占一半*/
+.two{
+  width:100%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-top:100rpx;
+  color:#1a1a1a;
+}
+
+.two_1{
+  width:50%;
+  height:80rpx;
+  border-right:1px solid #ccc;
+}
+.two_2{
+  width:50%;
+   height:100rpx;
+}
+
+/*中间输入框的字体和样式*/
+.user_phone{
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  background: #F5EDE4;
+  padding:10px;
+  align-items: center;
+  border-top:1rpx solid #DBA871
+}
+.phone{
+  font-size:14px;
+  color:#DDAE7B;
+}
+.phone_btn{
+  font-size:16px;
+  border:1px solid rgb(212, 157, 55);
+  padding:10rpx;
+  border-radius: 10rpx;
+  background:#DBA871;
+  color:#fff;
+  margin-right:20rpx;
+}
+/*三行的样式*/
+.row{
+  width:100%;
+  background: #fff;
+}
+.row::before{
+  content:"";
+  display: block;
+  width:100%;
+  height: 30rpx;
+  background-color:#F7F7F7;
+}
+.row .user_msg{
+  background: #fff;
+  padding:20rpx 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom:1px solid #ccc;
+  font-size:14px;
+}
+.user_right{
+  transform: translateX(150rpx);
+  color:#aaa;
+}
+.rect::after{
+  content:"";
+  width:20rpx;
+  height: 20rpx;
+  border-top:1px solid #3e3e3e;
+  border-right:1px solid #3e3e3e;
+  transform: rotate(45deg);
+  display: block;
+}
+.right{
+ margin-left:440rpx;
+}
+.row navigator:last-child{
+  border:none;
+}

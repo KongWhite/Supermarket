@@ -1,0 +1,40 @@
+<!--pages/users/users.js.wxml-->
+<view class="container">
+<!--正中间的用户图标,点击跳转到授权-->
+  <navigator open-type="redirect" url="../regist/regist">
+  <image class="user" src="../image/user0.png"></image></navigator>
+  <p class="uname">用户名</p> 
+ 
+  <!--积分和券-->
+  <view class="two">
+    <view class="two_1">
+      <navigator open-type="redirect" url="../jifen/jifen">
+        
+        <text>--积分</text>
+      </navigator>
+    </view>
+    <view class="two_2">
+      <navigator open-type="redirect" url="../jifen/jifen">
+       
+        <text>3</text><text>张优惠券</text>
+      </navigator>
+    </view>
+  </view>
+  <view class="user_phone">
+    <text class="phone">绑定手机号后可获取/查看积分</text>
+    <navigator class="phone_btn">立即绑定</navigator>
+  </view>
+  
+  <view class="row">
+    <navigator class="user_msg rect">
+      <view class="user_left">我的信息</view>
+      <view class="user_right">请完善信息</view>
+    </navigator>
+     <navigator class="user_msg rect">
+      <view class="user_left">历史订单</view>
+    </navigator>
+     <navigator class="user_msg rect">
+      <view class="user_left">会员须知</view>
+    </navigator>
+  </view>
+</view>
