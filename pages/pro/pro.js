@@ -1,4 +1,4 @@
-// pages/pro/pro.js
+// miniprogram/pages/component/pro/pro.js
 Page({
 
   /**
