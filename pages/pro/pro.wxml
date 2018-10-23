@@ -1,2 +1,34 @@
-<!--pages/pro/pro.wxml-->
-<text>pages/pro/pro.wxml</text>
+<!--miniprogram/pages/component/pro/pro.wxml-->
+<!--商品的二级菜单-->
+<view class="list">
+  <navigator>
+    <image src="/images/list1.png" lazy-load aspectFill width="375" height="150"></image>
+  </navigator>
+</view>
+<view class="foods">
+  <navigator class="foods-img">
+    <image src="/images/s6.png" aspectFill lazy-load></image>
+    <text>瓜子 100g</text>
+    <text>￥ 0.01</text>
+  </navigator>
+  <navigator class="foods-img">
+    <image src="/images/s4.png" aspectFill lazy-load></image>
+    <text>花生 100g</text>
+    <text>￥ 0.01</text>
+  </navigator>
+  <navigator class="foods-img">
+    <image src="/images/s5.png" aspectFill lazy-load></image>
+    <text>白菜 100g</text>
+    <text>￥ 0.01</text>
+  </navigator>
+  <navigator class="foods-img">
+    <image src="/images/s6.png" aspectFill lazy-load></image>
+    <text>糯米 100g</text>
+    <text>￥ 0.01</text>
+  </navigator>
+  <navigator class="foods-img">
+    <image src="/images/s6.png" aspectFill lazy-load></image>
+    <text>糯米 100g</text>
+    <text>￥ 0.01</text>
+  </navigator>
+</view>

@@ -1,38 +1,22 @@
 <!--pages/pro-list/pro_list.wxml-->
 <view class="pro_list">
   <!--商品列表左侧-->
-  <view class="pro_left">
-    <view class="pro_item active">果味</view>
-    <view class="pro_item">蔬菜</view>
-    <view class="pro_item">炒货</view>
-    <view class="pro_item">点心</view>
-    <view class="pro_item">粗茶</view>
-    <view class="pro_item">淡饭</view>
+  <view class="pro_left" bindtap='tab'>
+    <view class='pro_item {{num==index? "active":""}}' data-num="{{index}}" wx:for="{{pro_list}}" wx:key="{{index}}" data-type="{{item.type}}">{{item.name}}</view>
   </view>
   <!--商品列表右侧-->
   <view class="pro_right">
     <!--banner图-->
-    <view class="list_banner"><image src="/image/list1.png" mode='aspectFill'></image></view>
+    <view class="list_banner"><image src="http://176.137.16.31:3000/{{pro_list[num].img}}" mode='aspectFill'></image></view>
     <!--类型-->
-    <view class="pro_type">果味</view>
+    <view class="pro_type">{{pro_list[num].name}}</view>
     <!--商品展示-->
-    <view class="pro_lists">
-      <navigator class="pro_list" url="/pages/pro-detail/pro_detail">
-        <image src="/image/c2.png" mode="aspectFill"></image>
+    <view class="pro_lists" bindtap='detail'>
+      <view class="pro_list" wx:for="{{pro_items}}" wx:key="{{item.did}}">
+        <image src="/image/c2.png" mode="aspectFill" data-pid="1"></image>
         <text>梨花带雨3个</text>
-      </navigator>
-      <navigator class="pro_list" url="/pages/pro-detail/pro_detail">
-        <image src="/image/c3.png" mode="aspectFill"></image>
-        <text>红枣500g</text>
-      </navigator>
-      <navigator class="pro_list" url="/pages/pro-detail/pro_detail">
-        <image src="/image/c4.png" mode="aspectFill"></image>
-        <text>奇异果2个</text>
-      </navigator>
-      <navigator class="pro_list" url="/pages/pro-detail/pro_detail">
-        <image src="/image/c4.png" mode="aspectFill"></image>
-        <text>奇异果2个</text>
-      </navigator>
+      </view>
+      
     </view>
   </view>
 </view>

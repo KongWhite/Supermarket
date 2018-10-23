@@ -1,2 +1,55 @@
-<!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<!--miniprogram/pages/home/home.wxml-->
+<view class="slider">
+  <swiper autoplay interval="3500" indicator-dots="{{true}}" circular="{{true}}">
+    <swiper-item wx:for="{{imgs}}" wx:key="{{id}}"> 
+      <image src="{{item.url}}" mode="aspectFill" lazy-load width="375" height="150"></image>
+    </swiper-item>
+  </swiper>
+</view>
+<!--搜索的按钮-->
+<view class="btn">
+  <button class="btn-item"><i class="icon iconfont icon-sousuo"></i>搜 索</button>
+</view>
+<view class="word">
+  <text>精选主题</text>
+</view>
+<view class="foods">
+  <navigator url="/pages/component/pro/pro?pid=1">
+    <image src="/images/s1.png" aspectFill lazy-load width="375" height="150"></image>
+  </navigator>
+  <navigator>
+    <image src="/images/s2.png" aspectFill lazy-load></image>
+  </navigator>
+  <navigator>
+    <image src="/images/s3.png" aspectFill lazy-load></image>
+  </navigator>
+<view class="word">
+  <text>最近新品</text>
+</view>
+  <navigator class="foods-img">
+    <image src="/images/s6.png" aspectFill lazy-load></image>
+    <text>瓜子 100g</text>
+    <text>￥ 0.01</text>
+  </navigator>
+  <navigator class="foods-img">
+    <image src="/images/s4.png" aspectFill lazy-load></image>
+    <text>花生 100g</text>
+    <text>￥ 0.01</text>
+  </navigator>
+  <navigator class="foods-img">
+    <image src="/images/s5.png" aspectFill lazy-load></image>
+    <text>白菜 100g</text>
+    <text>￥ 0.01</text>
+  </navigator>
+  <navigator class="foods-img">
+    <image src="/images/s6.png" aspectFill lazy-load></image>
+    <text>糯米 100g</text>
+    <text>￥ 0.01</text>
+  </navigator>
+  <navigator class="foods-img">
+    <image src="/images/s6.png" aspectFill lazy-load></image>
+    <text>糯米 100g</text>
+    <text>￥ 0.01</text>
+  </navigator>
+</view>
+<!--编写轮播与tabbar-->
