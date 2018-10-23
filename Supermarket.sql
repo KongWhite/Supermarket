@@ -132,6 +132,22 @@ INSERT INTO p_order VALUES(NULL, '102', '541', '1001', '1', '2', '');
 INSERT INTO p_order VALUES(NULL, '103', '652', '1001', '5', '1', '');
 INSERT INTO p_order VALUES(NULL, '104', '102', '1001', '3', '0', '');
 
+# order_detail
+CREATE TABLE order_detail(
+id INT PRIMARY KEY AUTO_INCREMENT,
+oid VARCHAR(8),
+order_time VARCHAR(16), 
+pay_time VARCHAR(16), 
+deliver_time VARCHAR(16), 
+recevied_time VARCHAR(16), 
+backup VARCHAR(128)
+);
+INSERT INTO order_detail VALUES(NULL, '101', '2018/10/15', '2018/10/15', '2018/10/16', '2018/10/18', '');
+INSERT INTO order_detail VALUES(NULL, '102','2018/10/18', '2018/10/18', '2018/10/19', '', '');
+INSERT INTO order_detail VALUES(NULL, '103','2018/10/17', '2018/10/17', '2018/10/18', '2018/10/20', '');
+
+
+
 
 # user
 CREATE TABLE user(
@@ -147,3 +163,17 @@ INSERT INTO user VALUES(NULL, '1004','visitor4' , '');
 INSERT INTO user VALUES(NULL, '1005','visitor5' , '');
 
 
+# pro_class
+CREATE TABLE pro_class(
+id INT PRIMARY KEY AUTO_INCREMENT,
+cid VARCHAR(8),
+name VARCHAR(16),
+type VARCHAR(8),
+backup VARCHAR(128)
+);
+INSERT INTO pro_class VALUES(NULL, '1001', '果味' , '1001' , '');
+INSERT INTO pro_class VALUES(NULL, '1002', '蔬菜' , '1002' , '');
+INSERT INTO pro_class VALUES(NULL, '1003', '炒货' , '1003' , '');
+INSERT INTO pro_class VALUES(NULL, '1004', '点心' , '1004' , '');
+INSERT INTO pro_class VALUES(NULL, '1005', '粗茶' , '1005' , '');
+INSERT INTO pro_class VALUES(NULL, '1006', '淡饭' , '1006' , '');
