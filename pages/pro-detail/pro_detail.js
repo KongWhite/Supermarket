@@ -16,7 +16,7 @@ Page({
     console.log(options)
     var did=options.did; 
      wx:wx.request({
-       url: 'http://176.137.16.31:3000/products/details?did='+did,
+       url: 'https://myserver.applinzi.com/supProducts/details?did='+did,
        method:'GET',
        success:(res)=>{
          console.log(res.data);
