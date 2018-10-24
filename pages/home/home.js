@@ -11,10 +11,10 @@ Page({
   onLoad: function (options) {
     /*获取服务器的轮播图片*/
     wx.request({
-      url:"http://176.137.16.31:3000/index/swiper",
+      url:"https://myserver.applinzi.com/supIndex/swiper",
       method:"GET",
       success:(res)=>{
-        console.log(res);
+        //console.log(res);
         this.setData({
           imgs:res.data
         })
@@ -22,10 +22,10 @@ Page({
     })
     /*获取商品类型的图片*/
     wx.request({
-      url:"http://176.137.16.31:3000/index/banner",
+      url:"https://myserver.applinzi.com/supIndex/banner",
       method:"GET",
       success:(res)=>{
-        console.log(res);
+        //console.log(res);
         this.setData({
           banner:res.data
         })
@@ -33,10 +33,10 @@ Page({
     })
     /*获取下列商品列表的数据*/
     wx.request({
-      url:"http://176.137.16.31:3000/index/new-pro",
+      url:"https://myserver.applinzi.com/supIndex/new-pro",
       method:"GET",
       success:(res)=>{
-        console.log(res);
+        //console.log(res);
         this.setData({
           imgs_list:res.data
         })

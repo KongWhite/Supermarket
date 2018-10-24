@@ -7,14 +7,14 @@
   <!--商品列表右侧-->
   <view class="pro_right">
     <!--banner图-->
-    <view class="list_banner"><image src="http://176.137.16.31:3000/{{pro_list[num].img}}" mode='aspectFill'></image></view>
+    <view class="list_banner"><image src="https://myserver.applinzi.com/{{pro_list[num].img}}" mode='aspectFill'></image></view>
     <!--类型-->
     <view class="pro_type">{{pro_list[num].name}}</view>
     <!--商品展示-->
     <view class="pro_lists" bindtap='detail'>
       <view class="pro_list" wx:for="{{pro_items}}" wx:key="{{item.did}}">
-        <image src="/image/c2.png" mode="aspectFill" data-pid="1"></image>
-        <text>梨花带雨3个</text>
+        <image src="https://myserver.applinzi.com/{{item.img}}" mode="aspectFill" data-did="{{item.did}}"></image>
+        <text>{{item.name}}</text>
       </view>
       
     </view>

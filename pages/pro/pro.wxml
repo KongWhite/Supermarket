@@ -1,34 +1,14 @@
 <!--miniprogram/pages/component/pro/pro.wxml-->
 <!--商品的二级菜单-->
 <view class="list">
-  <navigator>
+  <view>
     <image src="/image/list1.png" lazy-load aspectFill width="375" height="150"></image>
-  </navigator>
+  </view>
 </view>
 <view class="foods">
-  <navigator class="foods-img">
-    <image src="/image/s6.png" aspectFill lazy-load></image>
-    <text>瓜子 100g</text>
-    <text>￥ 0.01</text>
-  </navigator>
-  <navigator class="foods-img">
-    <image src="/image/s4.png" aspectFill lazy-load></image>
-    <text>花生 100g</text>
-    <text>￥ 0.01</text>
-  </navigator>
-  <navigator class="foods-img">
-    <image src="/image/s5.png" aspectFill lazy-load></image>
-    <text>白菜 100g</text>
-    <text>￥ 0.01</text>
-  </navigator>
-  <navigator class="foods-img">
-    <image src="/image/s6.png" aspectFill lazy-load></image>
-    <text>糯米 100g</text>
-    <text>￥ 0.01</text>
-  </navigator>
-  <navigator class="foods-img">
-    <image src="/image/s6.png" aspectFill lazy-load></image>
-    <text>糯米 100g</text>
-    <text>￥ 0.01</text>
+  <navigator class="foods-img" wx:for="{{pros}}" wx:key="{{item.did}}" url="/pages/pro-detail/pro_detail?did={{item.did}}">
+    <image src="https://myserver.applinzi.com/{{item.img}}" aspectFill lazy-load></image>
+    <text>{{item.name}}</text>
+    <text>￥{{item.price}}</text>
   </navigator>
 </view>
