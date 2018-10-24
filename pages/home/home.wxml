@@ -2,7 +2,7 @@
 <view class="slider">
   <swiper autoplay interval="3500" indicator-dots="{{true}}" circular="{{true}}">
     <swiper-item wx:for="{{imgs}}" wx:key="{{index}}"> 
-      <image src="http://176.137.16.31:3000/{{item.img}}" mode="aspectFill" lazy-load width="375" height="150"></image>
+      <image src="https://myserver.applinzi.com/{{item.img}}" mode="aspectFill" lazy-load width="375" height="150"></image>
     </swiper-item>
   </swiper>
 </view>
@@ -15,13 +15,13 @@
 </view>
 <view class="foods">
   <navigator wx:for="{{banner}}" wx:key="{{index}}" url="/pages/pro/pro?type={{item.type}}">
-    <image src="http://176.137.16.31:3000/{{item.img}}" aspectFill lazy-load></image>
+    <image src="https://myserver.applinzi.com/{{item.img}}" aspectFill lazy-load></image>
   </navigator>
 <view class="word">
   <text>最近新品</text>
 </view>
-  <navigator wx:for="{{imgs_list}}" wx:key="{{index}}" class="foods-img">
-    <image src="http://176.137.16.31:3000/{{item.img}}" aspectFill lazy-load></image>
+  <navigator wx:for="{{imgs_list}}" wx:key="{{index}}" class="foods-img" url="/pages/pro-detail/pro_detail?did={{item.did}}">
+    <image src="https://myserver.applinzi.com/{{item.img}}" aspectFill lazy-load></image>
     <text>{{item.name}} {{item.spec}}</text>
     <text>￥ {{item.price}}</text>
   </navigator>

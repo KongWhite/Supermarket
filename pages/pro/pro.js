@@ -5,14 +5,33 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    pros:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var type = options.type;
     console.log(options);
+    wx.request({
+      url: 'https://myserver.applinzi.com/supProducts/list?type='+type,
+      success:(result)=>{
+        //console.log(result);
+        this.setData({
+          pros:result.data
+        })
+      }
+    })
+    wx.request({
+      url: 'https://myserver.applinzi.com/supProducts/list?type=' + type,
+      success: (result) => {
+        //console.log(result);
+        this.setData({
+          pros: result.data
+        })
+      }
+    })
   },
 
   /**

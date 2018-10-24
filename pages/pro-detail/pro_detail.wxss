@@ -4,7 +4,7 @@
   margin-top: 15rpx;
   display: flex;
 }
-.detalis text{
+.detalis>navigator text{
   margin-left: 15rpx;
   font-size: 13px;
   color: #81D740;
@@ -18,9 +18,18 @@
 .detalis_img navigator:nth-child(1){
   margin-right: 50rpx;
 }
+.detalis_img input{
+  width: 400rpx;
+  height: 40rpx;
+  font-size: 12px;
+  text-align: start;
+  margin-right:100rpx; 
+  border: 1px solid #EFEFF2;
+  padding-left: 10rpx;
+}
 .detalis_img image{
-  width: 50rpx;
-  height: 50rpx;
+  width: 75rpx;
+  height: 75rpx;
 }
 .cart2{
   display: flex;
@@ -75,15 +84,16 @@
 .cart_list navigator{
   margin-top: 25rpx;
 }
-.cart_list navigator text{
+.cart_list text{
   font-size: 13px;
   font-weight: bold;
   color:#fff;
+  margin-top: 30rpx;
 }
-.cart_list navigator image{
+.cart_list  image{
   width: 75rpx;
   height: 75rpx;
-  margin-top: -15rpx;
+  margin-top: 11rpx;
 }
 .text_list{
   margin-top: 30rpx;
@@ -98,6 +108,19 @@
   margin: 15rpx;
   font-weight: bold;
   color: #767676;
+}
+.message{
+  display: block;
+  width: 35rpx;
+  height: 35rpx;
+  text-align: center;
+  color: #fff;
+  border-radius: 20rpx;
+  padding-bottom: 5rpx;
+  background: rgba(255,0,0,01);
+  position: absolute;
+  right: 22rpx;
+  top: 22rpx;
 }
 .monery{
   display: flex;
@@ -138,12 +161,24 @@
   display: block;
   position: relative;
   left: 550rpx;
-  top: -70rpx;
+  top: -65rpx;
 }
 .monery_list text{
   font-size: 12px;
   padding: 5rpx 10rpx;
-  border: 1px solid #767676;
+  color: rgb(243, 81, 83);
+  background-color: #FFF0F0 ;
+  border: 1px solid rgb(243, 81, 83);
+}
+.sale{
+  display: flex;
+  justify-content: space-between;
+}
+.sale text{
+  margin: 0 35rpx 20rpx 35rpx;
+  font-size: 13px;
+  font-weight: bold;
+  color: #767676;
 }
 .explain{
   display: flex;
