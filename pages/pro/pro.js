@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    type:0
 
   },
 
@@ -12,7 +13,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    //接收传过来的参数
+    //通过链接传参的方式获取参数
     console.log(options);
+    var type = options.type;
+    //通过商品类别名称的编号查询该类别下是商品
+    this.setDate({
+      type:type
+    })
   },
 
   /**
