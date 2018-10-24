@@ -1,7 +1,9 @@
 // miniprogram/pages/home/home.js
 Page({
   data: {
-    imgs:[]
+    imgs:[],
+    banner:[],
+    imgs_list:[]
   },
   /**
    * 生命周期函数--监听页面加载
@@ -9,12 +11,34 @@ Page({
   onLoad: function (options) {
     /*获取服务器的轮播图片*/
     wx.request({
-      url:"http://127.0.0.1:3000/imagelist",
+      url:"http://176.137.16.31:3000/index/swiper",
       method:"GET",
       success:(res)=>{
         console.log(res);
         this.setData({
-          imgs:res.data.msg
+          imgs:res.data
+        })
+      }
+    })
+    /*获取商品类型的图片*/
+    wx.request({
+      url:"http://176.137.16.31:3000/index/banner",
+      method:"GET",
+      success:(res)=>{
+        console.log(res);
+        this.setData({
+          banner:res.data
+        })
+      }
+    })
+    /*获取下列商品列表的数据*/
+    wx.request({
+      url:"http://176.137.16.31:3000/index/new-pro",
+      method:"GET",
+      success:(res)=>{
+        console.log(res);
+        this.setData({
+          imgs_list:res.data
         })
       }
     })
