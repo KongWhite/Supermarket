@@ -7,9 +7,9 @@ Page({
       num:e.target.dataset.num
     })
     wx.request({
-      url: 'http://176.137.16.31:3000/products/list?type='+type,
+      url: 'https://myserver.applinzi.com/supProducts/list?type='+type,
       success:(result)=>{
-        //console.log(result.data);
+        console.log(result.data);
         this.setData({
           pro_items:result.data
         })        
@@ -17,10 +17,10 @@ Page({
     })
   },
   detail:function(e){
-    var pid = e.target.dataset.pid;
-    console.log(pid);
+    var did = e.target.dataset.did;
+    console.log(did);
     wx.navigateTo({
-      url: '../pro-detail/pro_detail?pid='+pid
+      url: '../pro-detail/pro_detail?did='+did
     })
   },
   /**
@@ -37,14 +37,14 @@ Page({
    */
   onLoad: function (options) {
     wx.request({
-      url: 'http://176.137.16.31:3000/products/list-name',
+      url: 'https://myserver.applinzi.com/supProducts/list-name',
       success:(result)=>{
         this.setData({pro_list:result.data})
         console.log(this.data.pro_list);
       }
     })
     wx.request({
-      url: 'http://176.137.16.31:3000/products/list?type=1001',
+      url: 'https://myserver.applinzi.com/supProducts/list?type=1001',
       success: (result) => {
         this.setData({
           pro_items: result.data
