@@ -5,14 +5,26 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    detail:[],
+    number:1
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options)
+    var did=options.did; 
+     wx:wx.request({
+       url: 'http://176.137.16.31:3000/products/details?did='+did,
+       method:'GET',
+       success:(res)=>{
+         console.log(res.data);
+         this.setData({
+           detail:res.data
+         })
+       }
+     })
   },
 
   /**
@@ -62,5 +74,17 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  Cart:function(){
+    wx.switchTab({
+      url: '../shoppingcar/shop_car',
+    })  
+  },
+  Total:function(){
+    var n=this.data.number+1;
+    if(n>99){n=99}
+    this.setData({
+      number:n
+    })
   }
 })

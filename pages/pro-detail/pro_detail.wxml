@@ -5,10 +5,9 @@
      <text>推荐</text>
   </navigator>
   <view class='detalis_img'>
+  <input type='text' name='file' placeholder='查找'></input>
   <navigator>
-     <image src='/image/file.png' mode='aspectFill' lazy-load></image> 
-  </navigator>
-  <navigator>
+  <text class='message'>1</text>
      <image src='/image/news.png' mode='aspectFill' lazy-load></image>
   </navigator>     
   </view>
@@ -25,41 +24,37 @@
 <view class='cart2'>
 <!--购物车-收藏夹-->
   <view class='cart2_img'>
-    <text>1</text>
+    <text>{{number}}</text>
     <image src='/image/cart2.png' mode='aspectFill' lazy-load></image> 
    <!-- <image src='/image/sc.png' mode='aspectFill' lazy-load></image>-->
   </view>
 </view>
 <!--商品图片-->
-<view class='goods1'>
-   <image src='/image/goods1.png' mode='aspectFill' lazy-load></image>
+<view class='goods1' wx:for="{{detail}}" wx:key="{{index}}">
+   <image src="http://176.137.16.31:3000/{{item.img}}" mode='aspectFill' lazy-load></image>
 </view>
 <view class='cart_list'>
 <!--购物车栏-->
   <view>
-     <navigator>
-        <text>数量 1</text>
-     </navigator>
-     <navigator>
-         <text>+</text>
-     </navigator>
-     <navigator>
-         <text>加入购物车</text>
-     </navigator>  
-     <navigator>
-         <image src='/image/cart1.png' mode='aspectFill' lazy-load></image>
-     </navigator>
+        <text>数量  {{number}}</text>
+        <text bindtap='Total'>+</text>
+        <text>加入购物车</text>
+        <image bindtap='Cart' src='/image/cart1.png' mode='aspectFill' lazy-load></image>
   </view>
   <!--商品名称-价格-->
 </view>
-<view class='text_list'>
-   <text>有货</text>
-   <text>新鲜梨花带雨</text>
-   <text>￥0.01</text>
+<view class='text_list' wx:for="{{detail}}" wx:key="{{index}}">
+   <text>存货：{{item.stock}}</text>
+   <text>{{item.name}}</text>
+   <text>价格：{{item.price}}元</text>
 </view>
 <navigator class='monery_list'>
    <text>降价通知</text>
 </navigator>
+<view class='sale' wx:for="{{detail}}" wx:key="{{index}}">
+   <text>规格：{{item.spec}}/份</text>
+   <text>月销：{{item.sale_volu}}笔</text>
+</view>
 <view class='any'></view>
 <!--说明-->
 <view class='explain arrow'>
