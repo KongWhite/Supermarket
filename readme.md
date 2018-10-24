@@ -103,6 +103,10 @@
       </pre>
 
 
-
-
+/*git init 文件名 创建带有git的文件夹*/
+/*git add . 将该文件夹的文件添加到github中*/
+/*git commit -m "add home and pro to supermarket from ziping" 将文件提交上去*/
+/*git remote add origin https://github.com/Arrowfield/supermarket.git*/
+/*git pull --rebase origin master*/
+/*git push -u origin master*/
 
