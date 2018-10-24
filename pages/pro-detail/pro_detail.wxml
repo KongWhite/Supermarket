@@ -31,7 +31,7 @@
 </view>
 <!--商品图片-->
 <view class='goods1' wx:for="{{detail}}" wx:key="{{index}}">
-   <image src="http://176.137.16.31:3000/{{item.img}}" mode='aspectFill' lazy-load></image>
+   <image src="https://myserver.applinzi.com/{{item.img}}" mode='aspectFill' lazy-load></image>
 </view>
 <view class='cart_list'>
 <!--购物车栏-->
