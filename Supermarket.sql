@@ -27,14 +27,15 @@ CREATE TABLE banner(
 id INT PRIMARY KEY AUTO_INCREMENT,
 bid VARCHAR(2),
 img VARCHAR(64),    # img-url
+top_img VARCHAR(64),
 title VARCHAR(128),
 href VARCHAR(128),  
 type VARCHAR(4),
 backup VARCHAR(128)
 );
-INSERT INTO banner VALUES(NULL, '21', 'image/s1.png', '这是banner1图片', '', '1001', '');
-INSERT INTO banner VALUES(NULL, '22', 'image/s2.png', '这是banner2图片', '', '1002', '');
-INSERT INTO banner VALUES(NULL, '23', 'image/s3.png', '这是banner3图片', '', '1003', '');
+INSERT INTO banner VALUES(NULL, '21', 'image/s1.png', 'image/list1.png', '这是banner1图片', '', '1001', '');
+INSERT INTO banner VALUES(NULL, '22', 'image/s2.png', 'image/list1.png', '这是banner2图片', '', '1002', '');
+INSERT INTO banner VALUES(NULL, '23', 'image/s3.png', 'image/list1.png', '这是banner3图片', '', '1003', '');
 
 # pro_detail
 CREATE TABLE pro_detail(
@@ -169,11 +170,13 @@ id INT PRIMARY KEY AUTO_INCREMENT,
 cid VARCHAR(8),
 name VARCHAR(16),
 type VARCHAR(8),
+img VARCHAR(64),
 backup VARCHAR(128)
+
 );
-INSERT INTO pro_class VALUES(NULL, '1001', '果味' , '1001' , '');
-INSERT INTO pro_class VALUES(NULL, '1002', '蔬菜' , '1002' , '');
-INSERT INTO pro_class VALUES(NULL, '1003', '炒货' , '1003' , '');
-INSERT INTO pro_class VALUES(NULL, '1004', '点心' , '1004' , '');
-INSERT INTO pro_class VALUES(NULL, '1005', '粗茶' , '1005' , '');
-INSERT INTO pro_class VALUES(NULL, '1006', '淡饭' , '1006' , '');
+INSERT INTO pro_class VALUES(NULL, '1001', '果味' , '1001' , 'image/c1.png', '');
+INSERT INTO pro_class VALUES(NULL, '1002', '蔬菜' , '1002' , 'image/c1.png', '');
+INSERT INTO pro_class VALUES(NULL, '1003', '炒货' , '1003' , 'image/c1.png', '');
+INSERT INTO pro_class VALUES(NULL, '1004', '点心' , '1004' , 'image/c1.png', '');
+INSERT INTO pro_class VALUES(NULL, '1005', '粗茶' , '1005' , 'image/c1.png', '');
+INSERT INTO pro_class VALUES(NULL, '1006', '淡饭' , '1006' , 'image/c1.png', '');

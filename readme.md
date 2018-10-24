@@ -45,10 +45,10 @@
       1. 服务器地址及端口: http://176.137.16.31:3000
 	
       2. /index/swiper 
-         return -> img-url 轮播图地址
+         return -> img      轮播图地址
 	 
       3. /index/banner 
-	 return -> img-url  banner 图片地址
+	 return -> img      banner 图片地址
 	           top_img  二级列表最上面图片地址
 		   type     对应二级列表的产品类型编号	
 
