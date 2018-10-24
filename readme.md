@@ -18,6 +18,7 @@
       6. 许金山: 数据库
       
    3. 数据库
+      * 数据库后续更新, 所有表名加前缀 supermarket_ 
       <pre>
       1. swiper: id, sid, img, title, href, backup
 
@@ -40,32 +41,34 @@
 	       type: fruit(果味): 1001, veg(蔬菜): 1002, dry(炒货): 1003, dessert(点心): 1004, tea(粗茶): 1005, cereal(淡饭): 1006, backup
    </pre>
    
-   4. 后台请求接口:
+   4. 后台请求接口: 
+      * 二次修订, 修改服务器地址
+      * 修改数据端口
   <pre>
-      1. 服务器地址及端口: http://176.137.16.31:3000
+      1. 服务器地址及端口: https://myserver.applinzi.com
 	
-      2. /index/swiper 
-         return -> img-url 轮播图地址
+      2. /supIndex/swiper 
+         return -> img      轮播图地址
 	 
-      3. /index/banner 
-	 return -> img-url  banner 图片地址
+      3. /supIndex/banner 
+	 return -> img      banner 图片地址
 	           top_img  二级列表最上面图片地址
 		   type     对应二级列表的产品类型编号	
 
-      4. /index/new-pro
+      4. /supIndex/new-pro
          return -> did     商品 id
 		   ,name   商品名
 	   	   ,price  商品单价
 	 	   ,spec   商品规格
 	           ,img    商品图片地址
 
-      5. /products/list-name
+      5. /supProducts/list-name
          return -> cid     商品分类名id
 		   ,name   商品分类名
 		   ,type   商品分类名对应的商品分类类型
 		   ,img    商品列表最上层图片地址
 
-      6. /products/list?type=type
+      6. /supProducts/list?type=type
          get 方式获取类型为 type 的所有商品
          return -> did     商品 id
 		   ,name   商品名
@@ -73,7 +76,7 @@
 	 	   ,spec   商品规格
 	           ,img    商品图片地址
 
-      7. /products/details?did=did
+      7. /supProducts/details?did=did
 	 get 方式获取 did 为 did 的商品详细信息(用于商品详情页)
          return -> did     商品 id
 		   ,name   商品名
@@ -85,14 +88,14 @@
 		   ,detail 商品详细描述
 		   ,sale_volu  商品销售量
 
-      8. /order/shoppingcar
+      8. /supOrder/shoppingcar
 	 get 
          return -> pid         商品id
 	  	   ,user_id    用户id
 		   ,count_num  商品数量
 		   ,is_checked 是否选中商品
 
-      9. /order/list?user_id=1001    (获取以及付款的订单的列表, 目前只测试 user_id = 1001 的用户)
+      9. /supOrder/list?user_id=1001    (获取以及付款的订单的列表, 目前只测试 user_id = 1001 的用户)
          get
          return -> oid         订单id
 		   ,pid        商品id
@@ -102,6 +105,11 @@
       
       </pre>
 
+   5. Supermarket.sql 文件中的数据没有更新, 最新数据库内容保存在本地. sina.sql
+
+   6. 请各位在 微信公众平台 / 设置 下修改服务器域名为 https://myserver.applinzi.com 以允许小程序访问此域名.
+      同时, 在 小程序开发者工具 右上角 详情 中刷新 域名信息. 并且取消勾选 不校验合法域名. 
+      如果在微信公众平台设置了服务器域名, 在开发中工具 详情 中可以看到设置的对应域名信息.
 
 /*git init 文件名 创建带有git的文件夹*/
 /*git add . 将该文件夹的文件添加到github中*/
