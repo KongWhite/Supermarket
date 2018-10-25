@@ -44,10 +44,10 @@
   color:gray;
 }
 .foods .foods-img:nth-child(n){
-  margin-left:30rpx;
+  margin-left:35rpx;
 }
 .foods .foods-img:nth-child(2n){
-  margin-right:30rpx;
+  margin-right:35rpx;
 }
 .foods .foods-img image{
   width:174rpx;/*174rpx*/
