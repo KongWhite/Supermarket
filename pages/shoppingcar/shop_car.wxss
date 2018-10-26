@@ -7,14 +7,8 @@
   padding:20rpx;
   font-size:31rpx;
 }
- .shop-check view{
-  width:40rpx;
-  height:40rpx;
-  border:2px solid #ddd;
-  border-radius: 50%; 
- 
-}
-.shop .shop-check view{
+
+.shop .shop-check {
  margin: 50rpx 20rpx 0 0;
 }
 .shop-info{
@@ -31,10 +25,17 @@
   margin-top:60rpx;
 }
 .shop-sign{
-  margin-right: 75rpx;
+  display: inline-block;
+  width: 70rpx;
+}
+.shop-number{
+  width:40rpx;
+  display: inline-block
 }
 .shop-add{
-  margin-left: 75rpx;
+ display: inline-block;
+  width: 10rpx;
+  padding-left: 45rpx;
 }
 /*商品价格*/
 .shop-price{
@@ -67,7 +68,16 @@
 .total .total-price{
   margin: 15rpx 38rpx 0 380rpx;
 }
-.total .arrow{
+.total .shop-arrow{
   font-size: 42rpx;
   margin-top:6rpx;
+}
+
+.selectAll{
+  margin: 15rpx 10rpx 0 15rpx;
+}
+.cart-no-data{
+    padding:40rpx 0;
+    color: #999;
+    text-align: center;
 }
