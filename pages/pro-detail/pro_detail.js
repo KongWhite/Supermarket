@@ -1,5 +1,7 @@
 // pages/pro-detail/pro_detail.js
 var util = require('../../utils/util.js');
+
+var app = getApp();
 Page({
 
   /**
@@ -8,15 +10,15 @@ Page({
   data: {
     detail: [],
     number: 1,
-    time: 0,
+    time: 0    
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options)
     var did = options.did;
+    console.log(did)
     wx: wx.request({
       url: 'https://myserver.applinzi.com/supProducts/details?did=' + did,
       method: 'GET',
@@ -85,6 +87,7 @@ Page({
   Cart: function (e) {
     var pid = e.target.dataset.did;
     console.log(pid);
+    app.appData.pid = pid;
     wx.switchTab({
       url: '../shoppingcar/shop_car?pid=' + pid,
     })
