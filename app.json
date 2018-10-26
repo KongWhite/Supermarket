@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/shoppingcar/shop_car",
     "pages/home/home",
+    "pages/shoppingcar/shop_car",
     "pages/users/users",
     "pages/pro-list/pro_list",
     "pages/index/index",

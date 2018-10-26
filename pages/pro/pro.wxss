@@ -37,4 +37,5 @@
   height:174rpx;
   margin-bottom:20rpx;
   margin-top:20rpx;
+  background:#F5F6F5; 
 }

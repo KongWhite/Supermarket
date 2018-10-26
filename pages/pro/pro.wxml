@@ -6,7 +6,7 @@
   </view>
 </view>
 <view class="foods">
-  <navigator class="foods-img" wx:for="{{pros}}" wx:key="{{item.did}}" url="/pages/pro-detail/pro_detail?did={{item.did}}">
+  <navigator class="foods-img" wx:for="{{typeList}}" wx:key="{{item.did}}" url="/pages/pro-detail/pro_detail?did={{item.did}}">
     <image src="https://myserver.applinzi.com/{{item.img}}" aspectFill lazy-load></image>
     <text>{{item.name}}</text>
     <text>￥{{item.price}}</text>

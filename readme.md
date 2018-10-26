@@ -107,16 +107,8 @@
 
    5. Supermarket.sql 文件中的数据没有更新, 最新数据库内容保存在本地. sina.sql
 
-   6. 请各位在 微信公众平台 / 设置 下修改服务器域名为 https://myserver.applinzi.com 以允许小程序访问此域名.
+   6. 请各位在 微信公众平台 / 设置 下修改服务器域名为        https://myserver.applinzi.com 以允许小程序访问此域名.
       同时, 在 小程序开发者工具 右上角 详情 中刷新 域名信息. 并且取消勾选 不校验合法域名. 
       如果在微信公众平台设置了服务器域名, 在开发中工具 详情 中可以看到设置的对应域名信息.
-
-/*git init 文件名 创建带有git的文件夹*/
-/*git add . 将该文件夹的文件添加到github中*/
-/*git commit -m "add home and pro to supermarket from ziping" 将文件提交上去*/
-/*git remote add origin https://github.com/Arrowfield/supermarket.git*/
-/*git pull --rebase origin master*/
-/*git push -u origin master*/
-/*git remote set-url origin https://github.com/Arrowfield/Supermarket.git*/
 
 
