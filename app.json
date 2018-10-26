@@ -1,12 +1,12 @@
 {
   "pages": [
     "pages/home/home",
+    "pages/shoppingcar/shop_car",
     "pages/users/users",
     "pages/pro-list/pro_list",
     "pages/index/index",
     "pages/logs/logs",
     "pages/pro-detail/pro_detail",
-    "pages/shoppingcar/shop_car",
     "pages/pro/pro"
   ],
   "window": {

@@ -14,7 +14,6 @@ Page({
       url:"https://myserver.applinzi.com/supIndex/swiper",
       method:"GET",
       success:(res)=>{
-        //console.log(res);
         this.setData({
           imgs:res.data
         })

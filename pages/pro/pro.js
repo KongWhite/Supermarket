@@ -1,34 +1,31 @@
 // miniprogram/pages/component/pro/pro.js
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-    pros:[]
+    type:0,
+    typeList:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    ///supProducts/list?type=type
+    //url:"https://myserver.applinzi.com/supIndex/swiper",
     var type = options.type;
-    console.log(options);
-    wx.request({
-      url: 'https://myserver.applinzi.com/supProducts/list?type='+type,
-      success:(result)=>{
-        //console.log(result);
-        this.setData({
-          pros:result.data
-        })
-      }
+    //通过商品类别名称的编号查询该类别下是商品
+    this.setData({
+      type:type
     })
     wx.request({
-      url: 'https://myserver.applinzi.com/supProducts/list?type=' + type,
-      success: (result) => {
-        //console.log(result);
+      url:"https://myserver.applinzi.com/supProducts/list?type="+this.data.type,
+      method:"GET",
+      success:(res)=>{
+        console.log(res);
         this.setData({
-          pros: result.data
+          typeList:res.data
         })
       }
     })
