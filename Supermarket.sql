@@ -1,13 +1,13 @@
 ## supermarket 项目中的所有数据表都写入到其他数据库中了. 所以不在建立 supermarket 数据库.
 # supermarket 数据库
 
-# SET NAMES UTF8;
+ SET NAMES UTF8;
 
-# DROP DATABASE IF EXISTS supermarket;
+ DROP DATABASE IF EXISTS supermarket;
 
-# CREATE DATABASE supermarket CHARSET=UTF8;
+ CREATE DATABASE supermarket CHARSET=UTF8;
 
-# USE supermarket;
+ USE supermarket;
 
 ########################## 创建 supermarket 项目数据表 #############################
 

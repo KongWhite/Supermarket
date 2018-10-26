@@ -102,6 +102,11 @@
 		   ,user_id    用户id
 		   ,status     订单状态
 		   ,count_num  购买产品个数	 
+
+      10. /supOrder/addPro ( 提交购物车商品信息到数据库 )
+         post
+	 提交以对象形式提交, 对象属性名分别为:
+	 user_id / count_num / pid -> 表示用户id / 商品数量 / 商品id
       
       </pre>
 
