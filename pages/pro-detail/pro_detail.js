@@ -1,12 +1,14 @@
 // pages/pro-detail/pro_detail.js
+var util = require('../../utils/util.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    detail:[],
-    number:1
+    detail: [],
+    number: 1,
+    time: 0,
   },
 
   /**
@@ -14,17 +16,22 @@ Page({
    */
   onLoad: function (options) {
     console.log(options)
-    var did=options.did; 
-     wx:wx.request({
-       url: 'https://myserver.applinzi.com/supProducts/details?did='+did,
-       method:'GET',
-       success:(res)=>{
-         console.log(res.data);
-         this.setData({
-           detail:res.data
-         })
-       }
-     })
+    var did = options.did;
+    wx: wx.request({
+      url: 'https://myserver.applinzi.com/supProducts/details?did=' + did,
+      method: 'GET',
+      success: (res) => {
+        console.log(res.data);
+        this.setData({
+          detail: res.data
+        })
+      }
+    })
+    var time = util.formatTime(new Date());
+    this.setData({
+      time: time
+    })
+
   },
 
   /**
@@ -75,16 +82,18 @@ Page({
   onShareAppMessage: function () {
 
   },
-  Cart:function(){
+  Cart: function (e) {
+    var pid = e.target.dataset.did;
+    console.log(pid);
     wx.switchTab({
-      url: '../shoppingcar/shop_car',
-    })  
+      url: '../shoppingcar/shop_car?pid=' + pid,
+    })
   },
-  Total:function(){
-    var n=this.data.number+1;
-    if(n>99){n=99}
+  Total: function () {
+    var n = this.data.number + 1;
+    if (n > 99) { n = 99 }
     this.setData({
-      number:n
+      number: n
     })
   }
 })

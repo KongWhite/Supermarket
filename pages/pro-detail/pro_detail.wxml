@@ -5,11 +5,14 @@
      <text>推荐</text>
   </navigator>
   <view class='detalis_img'>
-  <input type='text' name='file' placeholder='查找'></input>
-  <navigator>
-  <text class='message'>1</text>
-     <image src='/image/news.png' mode='aspectFill' lazy-load></image>
-  </navigator>     
+     <view>
+        <input type='text' name='file' placeholder='查找'></input>
+        <image src='/image/file.png' mode='aspectFill' lazy-load></image>
+     </view>
+     <view>
+     <view class='message_1'><text>1</text></view>
+        <image src='/image/news.png' mode='aspectFill' lazy-load></image>
+     </view>  
   </view>
 </view>
 <!--红包-->
@@ -31,15 +34,16 @@
 </view>
 <!--商品图片-->
 <view class='goods1' wx:for="{{detail}}" wx:key="{{index}}">
-   <image src="https://myserver.applinzi.com/{{item.img}}" mode='aspectFill' lazy-load></image>
+   <image src="https://myserver.applinzi.com/{{item.img}}" mode='aspectFill' lazy-load>
+   </image>
 </view>
-<view class='cart_list'>
+<view class='cart_list' wx:for="{{detail}}" wx:key="{{index}}">
 <!--购物车栏-->
   <view>
         <text>数量  {{number}}</text>
         <text bindtap='Total'>+</text>
         <text>加入购物车</text>
-        <image bindtap='Cart' src='/image/cart1.png' mode='aspectFill' lazy-load></image>
+        <image bindtap='Cart'  data-did="{{item.did}}" src='/image/cart1.png' mode='aspectFill' lazy-load></image>
   </view>
   <!--商品名称-价格-->
 </view>
@@ -48,9 +52,9 @@
    <text>{{item.name}}</text>
    <text>价格：{{item.price}}元</text>
 </view>
-<navigator class='monery_list'>
+<view class='detail-list'>
    <text>降价通知</text>
-</navigator>
+</view>
 <view class='sale' wx:for="{{detail}}" wx:key="{{index}}">
    <text>规格：{{item.spec}}/份</text>
    <text>月销：{{item.sale_volu}}笔</text>
@@ -86,7 +90,7 @@
       <view class='star-after'>★★★★★</view>
       <view class='star-before'>★★★★★</view>
     </view>
-   <text>03月18日17:59:46</text>
+   <text>{{time}}</text>
 </view>
 <view class='review_1'>
     <text>酸酸甜甜很好吃，新鲜，个头大</text>
