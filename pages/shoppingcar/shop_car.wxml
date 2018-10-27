@@ -5,17 +5,17 @@
     <icon wx:if="{{item.is_checked}}" type="success" color="red" data-index="{{index}}"  bindtap="selectList"/>
     <icon wx:else type="circle"  data-index="{{index}}" bindtap="selectList"/>
   </view>
-  <image class="shop-img" src="/image/s5.png" mode="aspectFill" lazy-load></image>
+  <image class="shop-img" src="https://myserver.applinzi.com/{{item.img}}" mode="aspectFill" lazy-load></image>
   <view class="shop-info">
-   <text>新鲜芹菜 半斤</text>
+   <text>{{item.name}}</text>
    <view class="shop-button">
-     <text class="shop-sign" bindtap="subNum">-</text>
-     <text class="shop-number">{{number}}</text>
-     <text class="shop-add" bindtap="addNum">+</text>
+     <text class="shop-sign" bindtap="subNum" data-index="{{index}}">-</text>
+     <text class="shop-number">{{item.count_num}}</text>
+     <text class="shop-add" bindtap="addNum" data-index="{{index}}">+</text>
    </view>
   </view>
   <view class="shop-price">
-   <text>￥0.01</text>
+   <text>￥{{item.price}}</text>
    <text class="delete" bindtap='deletelist' data-index="{{index}}">X</text>
   </view>
 
@@ -25,7 +25,7 @@
     <icon wx:else type="circle" data-index="{{index}}" bindtap="selectAll"></icon>
    </view>
      <text class="checkall">全选</text>
-     <text class="total-price">￥0.00</text>
+     <text class="total-price">￥{{totalprice}}</text>
      <text class="shop-arrow">➔</text>
    </view>
  </view>
