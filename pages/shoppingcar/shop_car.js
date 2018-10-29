@@ -5,33 +5,21 @@ Page({
    * 页面的初始数据
    */
   data: {
-    number: 2,
+    
     cartlist:[],
     haslist:true,
-    selectAll: true//默认情况下为全选
-    
+    selectAll: true,//默认情况下为全选
+    totalprice:0
   },
    content:function(){
      var cartlist = this.data.cartlist;
-     console.log(cartlist);
      if (cartlist.length == 0) {
        this.setData({
          haslist: false
        })
      }
    },
-   loadMore:function(){
-     wx.request({
-       url: 'https://myserver.applinzi.com/supOrder/shoppingcar',
-       success:(res)=>{
-         console.log(res);
-         this.setData({
-           cartlist:res.data
-         });
-         this.content();
-       }
-     })
-   },
+   
    /*单选 */
    selectList:function(e){
      var index = e.currentTarget.dataset.index;
@@ -41,6 +29,7 @@ Page({
      this.setData({
        cartlist: cartlist
      });
+     this.getTotalprice();
    },
    /*全选*/ 
    selectAll:function(e){
@@ -55,12 +44,13 @@ Page({
        selectAll: selectAll,
        cartlist: cartlist
      });
+     this.getTotalprice();
    },
    /*删除*/
    deletelist:function(e){
      var index=e.currentTarget.dataset.index;
      var cartlist=this.data.cartlist;
-     console.log(cartlist.splice(index,1));
+     cartlist.splice(index,1);
      this.setData({
        cartlist:cartlist
      })
@@ -68,14 +58,39 @@ Page({
        this.setData({
          haslist: false
        });
+     }else{
+       this.getTotalprice();
      }
    },
+   /*总价*/ 
+  getTotalprice:function(e){ 
+    var cartlist=this.data.cartlist
+    var total=0;
+    for(var i=0;i<cartlist.length;i++){
+      if(cartlist[i].is_checked){
+        total+=cartlist[i].count_num * cartlist[i].price; 
+      }
+    }
+    this.setData({
+      cartlist:cartlist,
+      totalprice:total.toFixed(2)
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.loadMore();
+    wx.request({
+      url: 'https://myserver.applinzi.com/supOrder/shoppingcar',
+      success: (res) => {
+        this.setData({
+          cartlist: res.data
+        });
+        this.content();
+        this.getTotalprice();
+      }
+    })
    
   },
   /**
@@ -127,17 +142,29 @@ Page({
   onShareAppMessage: function () {
 
   },
-  addNum: function () {
-    var n = this.data.number + 1;
+  addNum:function (e) {
+    var cartlist=this.data.cartlist;
+    var index = e.currentTarget.dataset.index;
+    var n = cartlist[index].count_num;
+    n++;
+    cartlist[index].count_num=n;
     this.setData({
-      number: n
+      cartlist:cartlist
     })
+    this.getTotalprice();
   },
-  subNum: function () {
-    var n = this.data.number - 1;
-    if (n < 1) { n = 1 }
+  subNum: function(e){
+    var cartlist = this.data.cartlist;
+    var index = e.currentTarget.dataset.index;
+    var n = cartlist[index].count_num;
+    n--;
+    cartlist[index].count_num = n;
+    if (cartlist[index].count_num < 1) { 
+      cartlist[index].count_num = 1 
+      }
     this.setData({
-      number: n
-    })
+      cartlist: cartlist
+    })  
+    this.getTotalprice();   
   }
 })

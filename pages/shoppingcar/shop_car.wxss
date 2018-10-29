@@ -26,7 +26,7 @@
 }
 .shop-sign{
   display: inline-block;
-  width: 70rpx;
+  width: 75rpx;
 }
 .shop-number{
   width:40rpx;
@@ -35,7 +35,7 @@
 .shop-add{
  display: inline-block;
   width: 10rpx;
-  padding-left: 45rpx;
+  padding-left: 40rpx;
 }
 /*商品价格*/
 .shop-price{
