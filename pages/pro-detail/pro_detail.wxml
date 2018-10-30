@@ -42,7 +42,7 @@
   <view>
         <text>数量  {{number}}</text>
         <text bindtap='Total'>+</text>
-        <text>加入购物车</text>
+        <text bindtap='ToCart' data-pid="{{item.did}}">加入购物车</text>
         <image bindtap='Cart' data-did="{{item.did}}"  src='/image/cart1.png' mode='aspectFill' lazy-load></image>
   </view>
   <!--商品名称-价格-->

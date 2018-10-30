@@ -12,7 +12,7 @@ Page({
     number: 1,
     time: 0    
   },
-
+  
   /**
    * 生命周期函数--监听页面加载
    */
@@ -23,7 +23,7 @@ Page({
       url: 'https://myserver.applinzi.com/supProducts/details?did=' + did,
       method: 'GET',
       success: (res) => {
-        console.log(res.data);
+        //console.log(res.data);
         this.setData({
           detail: res.data
         })
@@ -91,6 +91,7 @@ Page({
     wx.switchTab({
       url: '../shoppingcar/shop_car?pid=' + pid,
     })
+
   },
   Total: function () {
     var n = this.data.number + 1;
@@ -98,5 +99,33 @@ Page({
     this.setData({
       number: n
     })
+  },
+  ToCart:function(e){
+    console.log(e)
+    var pid=e.target.dataset.pid;
+  //  console.log(pid)
+      //console.log(this.data.user_id)
+      //console.log(this.data.number);
+      //console.log(e.target.dataset.pid)
+    //向数据库插入数据
+    wx.request({
+      url: 'https://myserver.applinzi.com/supOrder/addPro',
+      data: {
+        "user_id":1001,                       //用户id 1001
+        "count_num":this.data.number,         //产品数量
+        "pid": e.target.dataset.pid           //产品id
+      },
+      header: { "Content-Type": "application/x-www-form-urlencoded" },
+      method: 'POST',
+      success: (res)=>{
+        console.log(res.data)
+        wx.showToast({
+            title:'添加成功',
+            icon:'success',
+            duration:2000
+        })
+      },
+    }) 
   }
+
 })
