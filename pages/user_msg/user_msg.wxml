@@ -1,0 +1,39 @@
+<!--pages/user_msg/user_msg.wxml-->
+<view>
+  <view class="container">
+    <view class="user">
+      <open-data type="userAvatarUrl"></open-data> 
+    </view>
+    <open-data type="userNickName" lang="zh_CN" class="uname"></open-data> 
+  </view>
+  <view class="msg">
+    <view class="item name">
+      <text>昵称</text>
+      <input type="text" value="{{uname}}" bindblur="get_uname" placeholder='请输入昵称'></input>
+    </view>
+    <view class="item ">
+      <text>电话</text>
+      
+      <input type="text" value="{{phone}}" placeholder='请输入手机号码' bindblur='get_phone'></input>
+    </view>
+    <view class="item">
+      <text>性别</text>
+      <radio-group class="radio_box" bindchange="get_sex">
+        <radio value='1' checked="{{ sex == '1' ?'true':''}}"></radio><text>男士</text>
+        <radio value='0' checked="{{ sex == '0' ?'true':''}}"></radio><text>女士</text>
+      </radio-group>
+    </view>
+    <view class="item ">
+      <text>生日</text>
+      <view class="section">  
+        <picker mode="date" value="{{date}}" start="1978-01-01" end="2999-12-31" bindchange="bindDateChange">  
+        <input class="picker" value="{{dates}}" placeholder='请输入生日信息' disabled></input> 
+        </picker>  
+      </view>  
+    </view>
+    <view>
+      <button class="btn" bindtap='save'>保存</button>
+    </view>
+  </view> 
+</view>
+

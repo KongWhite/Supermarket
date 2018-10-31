@@ -107,19 +107,6 @@
          post
 	 提交以对象形式提交, 对象属性名分别为:
 	 user_id / count_num / pid -> 表示用户id / 商品数量 / 商品id
-
-      11. /supUser/get-info?uid=uid ( 获取 用户id = uid 的用户信息 )
-          get
-	  return -> uid,       用户id
-		    uname,     用户名
-		    nickname,  用户昵称
-		    phone,     电话
-		    birth      生日
-
-      12. /supUser/add-user ( 提交用户信息 )
-          post
-	  提交以对象形式提交, 对象属性名分别为:
-	  uid / uname / nickname / phone / birth  -> 表示用户id / 用户名 / 用户昵称 / 电话 / 生日
       
       </pre>
 

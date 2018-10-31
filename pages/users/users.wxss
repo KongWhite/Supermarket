@@ -5,16 +5,31 @@ page{
   background:#F7F7F7;
 }
 .container .user{
-  width:200rpx;
-  height:180rpx;
+  width:220rpx;
+  height:220rpx;
   margin-top:-120rpx;
   background:#ccc;
-  border-radius:50%;
   display:block;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.btns{
+  width:50vw;
+  display: flex;
+  justify-content: center;
+}
+.btn{
+  width:45%;
+  height:50rpx;
+}
+.container .user image{
+  width:100%;
+  height:100%;
 }
 .uname{
   display: block;
   margin-top:10px;
+  height:20rpx;
   color: #1a1a1a;
 }
 /*积分和券宽度各占一半*/
@@ -55,6 +70,7 @@ page{
   font-size:16px;
   border:1px solid rgb(212, 157, 55);
   padding:10rpx;
+  line-height: 120%;
   border-radius: 10rpx;
   background:#DBA871;
   color:#fff;
@@ -99,4 +115,7 @@ page{
 }
 .row navigator:last-child{
   border:none;
+}
+.btn_hide{
+  display: none;
 }

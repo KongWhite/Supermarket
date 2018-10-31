@@ -7,7 +7,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/pro-detail/pro_detail",
-    "pages/pro/pro"
+    "pages/pro/pro",
+    "pages/user_msg/user_msg"
   ],
   "window": {
     "backgroundTextStyle": "light",

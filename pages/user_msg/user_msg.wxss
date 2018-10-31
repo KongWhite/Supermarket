@@ -1,0 +1,81 @@
+/* pages/user_msg/user_msg.wxss */
+page{
+  background:#F7F7F7;
+}
+.container{
+  width: 100vw;
+}
+.container .user{
+  width:220rpx;
+  height:220rpx;
+  margin-top:-120rpx;
+  background:#ccc;
+  display:block;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.container .user image{
+  width:100%;
+  height:100%;
+}
+.uname{
+  display: block;
+  margin-top:10px;
+  height:20rpx;
+  color: #1a1a1a;
+}
+.msg{
+  width:100%;
+  background:#fff;
+  padding:0 10rpx;
+}
+.msg::before{
+  content:"";
+  display: block;
+  width:100%;
+  height:20rpx;
+  background-color:#F7F7F7;
+}
+.msg .item{
+  display: flex;
+  justify-content: left;
+  height:50rpx;
+  border-bottom: 1px solid #F7F7F7;
+  padding:20rpx;
+}
+.msg .text{
+  width:50px;
+  text-align: center;
+}
+.item text{
+  width:50px;
+  text-align: center;
+}
+.item input{
+  width:75%;
+  margin-left:100rpx;
+}
+.item .radio_box{
+  margin-left:100rpx;
+}
+.radio_box radio{
+  transform: scale(0.8);
+}
+.radio_box text{
+  margin-right:50rpx;
+  text-align: center;
+}
+.item .section{
+  width:75%;
+  margin-left:100rpx;
+  color:#ccc;
+  position: relative;
+}
+.section input{
+ margin-left:0; 
+}
+.btn{
+  margin-top:50rpx;
+  background-color:#DBA871;
+  color:#fff;
+}
